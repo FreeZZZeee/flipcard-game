@@ -5,7 +5,7 @@ const timeTag = document.querySelector(".time b");
 const flipsTag = document.querySelector(".flips b");
 const refreshBtn = document.querySelector(".details button");
 
-let maxTime = 20;
+let maxTime = 30;
 let timeLeft = maxTime;
 let flips = 0;
 let matchedCards = 0;
@@ -101,11 +101,10 @@ const shuffleCards = () => {
                 iconTag.classList.value = `bx ${arr[index]}`
             }
         }, 500);
-        card.addEventListener("clik", flipCard);
+        card.addEventListener("click", flipCard);
     });
 }
 
-shuffleCards();
 refreshBtn.addEventListener("click", shuffleCards);
 
 cards.forEach(card => {
